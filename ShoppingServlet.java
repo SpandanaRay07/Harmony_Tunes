@@ -82,10 +82,9 @@ public class ShoppingServlet extends HttpServlet {
   }
 
 private CD getCD(HttpServletRequest req) {
-    //imagine if all this was in a scriptlet...ugly, eh?
     String myCd = req.getParameter("CD");
     String qty = req.getParameter("qty");
-    StringTokenizer t = new StringTokenizer(myCd,"|");//tokens are created 
+    StringTokenizer t = new StringTokenizer(myCd,"|");
     String album= t.nextToken();
     String artist = t.nextToken();
     String country = t.nextToken();
